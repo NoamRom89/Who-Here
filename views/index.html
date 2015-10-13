@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html ng-app="bulletinApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Who's Here?</title>
+
+    <!-- Scripts -->
+    <script src="js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/master-app.js"></script>
+    <script src="js/controllers/board.js"></script>
+    
+   
+
+    <!-- CSS -->
+    <link rel="stylesheet"  href="stylesheets/style.css" />
+    
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon  -->
+
+</head>
+<body ng-controller="bulletinCntrl" ng-cloak>
+    <div id="headerDiv">
+        <img id="homePagePic"/>
+        <p id="title">WHO'S HERE?</p>
+        <div class="calendar">
+            <input ng-change="changeDate();"  placeholder="Today" type="text" onfocus="(this.type='date')" ng-model="calendar.value" id="date"> 
+        </div>
+    </div>
+
+    <ng-view></ng-view>
+
+
+</body>
+</html>

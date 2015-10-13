@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="logsApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Logs - Who's Here?</title>
+
+    <!-- Scripts -->
+    <script src="js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/master-app.js"></script>
+    <script src="js/controllers/board.js"></script>
+
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css" />
+
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body ng-controller="logsCntrl">
+    <div id="container">
+        <h1>Logs</h1>
+        <div id="tableStyle">
+            <table>
+                <tr>
+                    <th>Date Created</th>
+                    <th>Employee Name</th>
+                    <th>Status</th>
+                    <th>Date expected to be off work</th>
+                </tr>
+                <tr ng-repeat="log in logs">
+                    <td>{{ log.dateCreated}}</td>
+                    <td>{{ log.userId}}</td>
+                    <td>{{ log.status}}</td>
+                    <td>{{ log.date}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
