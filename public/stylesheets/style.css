@@ -33,13 +33,13 @@
 
     #loginPagePic{
         background-image: url("../images/portal-logo.png");
-        width: 0px;
+        width: 12px;
         height: 0px;
         outline: none;
         background-repeat: no-repeat;
         padding-top: 70px;
         padding-left: 38px;
-        margin-left: 253px;
+        margin-left: 261px;
         margin-top: -30px;
     }
     #title {
@@ -172,7 +172,7 @@
     padding-top: 80px;
     margin-top: 75px;
     position: relative;
-
+    border-radius: 50px;
 }
 
     .login  > input:first-child{ 
@@ -186,22 +186,26 @@
        font-family: sans-serif;
     }
     #pass{
-        margin-left: -100px;
+        margin-left: -122px;
         width: 180px;
         height: 40px;
         font-size: 20px;
         border: 2px #0C2D4D solid;
         text-align: center;
+        border-radius: 20px;
     }
-    input[type=submit] {
+    #submitLogin {
         padding: 5px 15px;
-        background: #ccc;
-        border: 0 none;
-        cursor: pointer;
-        position: absolute;
-        border-radius: 5px;
-        top: 170px;
-        right: 273px;
+    background: #ccc;
+    border: 0 none;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    top: 170px;
+    right: 256px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
     }
 
     table {
@@ -227,7 +231,7 @@
 
     #headerDiv {
         position: relative;
-        width: 100%;
+        width: 122%;
         height: 100px;
         background-color: #0C2D4D;
         color: #FFFFFF;
@@ -248,15 +252,15 @@
     }
 
     #loginPagePic{
-        background-image: url("../images/portal-logo.png");
-        width: 0px;
-        height: 0px;
-        outline: none;
-        background-repeat: no-repeat;
-        padding-top: 80px;
-        padding-left: 45px;
-        margin-left: 71px;
-        margin-top: -30px;
+                background-image: url("../images/portal-logo.png");
+    width: 12px;
+    height: 0px;
+    outline: none;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    padding-left: 38px;
+    margin-left: 90px;
+    margin-top: -30px;
     }
 
     #title {
@@ -281,12 +285,13 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 15px;
             border: none;
+                margin-right: 73px;
         }
 
     .userSection {
-        width: 96%;
-        height: 100%;
-        margin-left: 4px;
+        width: 93%;
+    height: 100%;
+    margin-left: 8px;
     }
 
     .userSection .userColor {
@@ -313,11 +318,11 @@
     }
 
     .userSection .userColor .userName {
-        font-size: 20px;
-        font-family: 'Open Sans', sans-serif;
-        position: absolute;
-        top: 40px;
-        left: 72px;
+            font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    top: 40px;
+    left: 59px;
     }
 
 
@@ -378,8 +383,8 @@
         background-color: #BFBFAC;
     }
     .login { 
-    height: 180px;
-    width: 55%;
+        height: 255px;
+    width: 68%;
     margin: auto;
     border: 3px #0C2D4D solid;
     padding: 10px;
@@ -387,7 +392,8 @@
     padding-top: 80px;
     margin-top: 75px;
     position: relative;
-
+    border-radius: 50px;
+    margin-left: 43px;
 }
 
     .login  > input:first-child{ 
@@ -401,24 +407,26 @@
        font-family: sans-serif;
     }
     #pass{
-        margin-left: -2px;
-        width: 180px;
-        height: 40px;
-        font-size: 20px;
-        border: 2px #0C2D4D solid;
-        text-align: center;
+            margin-left: 19px;
+    width: 180px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px #0C2D4D solid;
+    text-align: center;
+    border-radius: 20px;
     }
-    input[type=submit] {
-        padding: 16px;
-        background: #ccc;
-        border: 0 none;
-        cursor: pointer;
-        position: absolute;
-        border-radius: 5px;
-        top: 202px;
-        right: 69px;
+     #submitLogin {
+            padding: 5px 15px;
+    background: #ccc;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 73px;
+    margin-top: 33px;
     }
-
 }
 
 /************************************************       Logs page style            *********************************************************/
@@ -430,7 +438,7 @@
 }
 
 h1{
-        position: absolute;
+    position: absolute;
     left: 918px;
     top: 30px;
 }
