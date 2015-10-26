@@ -11,10 +11,7 @@ router.get('/', function (req, res) {
     res.render('index.html');
 });
 
-
-
 router.get('/logs', function (req, res) {
-    //if(user.role == 'admin')
         res.render('logs.html');
 });
 

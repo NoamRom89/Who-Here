@@ -36,7 +36,7 @@
                     <th>Status</th>
                     <th>Date expected to be off work</th>
                 </tr>
-                <tr ng-repeat="log in logs">
+                <tr ng-repeat="log in logs | orderBy : '-date'">
                     <td>{{ log.dateCreated}}</td>
                     <td>{{ log.userId}}</td>
                     <td>{{ log.status}}</td>

@@ -22,6 +22,9 @@ bulletinApp.config(['$routeProvider', '$locationProvider', function ($routeProvi
 /**     Controllers    **/
 
 
+/*************************  Board    ********************************/
+
+
 bulletinApp.controller('bulletinCntrl', function ($scope, $rootScope, $http, $location) {
     
     $scope.users = {};

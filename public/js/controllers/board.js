@@ -74,11 +74,8 @@ bulletinApp
             
         }
     }
-    
-    
-    
-    
-    
+
+    //Setting the float of the selected option    
     $scope.setFloat = function (select) {
         
         if (select == '1HalfDayOff' || select == '2HalfDayOff' || select == 'leavingEarly')
@@ -94,6 +91,7 @@ bulletinApp
         
         //Enter only if user changes his selection
         console.log('statusName, userId, $scope.getDateFormat(): ', statusName, userId, $scope.$parent.getDateFormat());
+            
 
         var log = {
             status : statusName,
@@ -118,9 +116,13 @@ bulletinApp
             console.log('Error : headers', headers);
             console.log('Error : config', config);
         });
-
-            //updatedData($scope.calendar.value);
-
+    }
+    
+    $scope.getNotWorkingWidth = function (userSelectedOption){
+        console.log("getNotWorking width : ", userSelectedOption);
+        if (userSelectedOption != 'notWroking')
+            return;
+        return 75;
     }
     
     //Randomaly chaning border color
