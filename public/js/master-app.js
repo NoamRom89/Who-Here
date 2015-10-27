@@ -116,6 +116,8 @@ logsApp.config(['$routeProvider', '$locationProvider', function ($routeProvider,
 logsApp.controller('logsCntrl', function ($scope, $rootScope, $http, $location) {
     
     $scope.logs = {};
+    
+    $scope.i = 0;
 
     $(document).ready(function () {
         
@@ -130,8 +132,7 @@ logsApp.controller('logsCntrl', function ($scope, $rootScope, $http, $location) 
                 console.log('(getLog != null in api/getLog)', data);
                 $scope.logs = data;
                 angular.forEach($scope.logs, function (log) {
-                    log.dateCreated = $scope.convertTimestampToDate(log.dateCreated);
-                    //log.userId = log.userId.populate;
+                    log.dateCreated = moment("/Date(" + log.dateCreated + ")/");
                 });
             }
 
@@ -148,15 +149,4 @@ logsApp.controller('logsCntrl', function ($scope, $rootScope, $http, $location) 
         });
         
     });
-
-    //Convert time stamp from DB to humen date
-    $scope.convertTimestampToDate = function (timestamp) {
-        var theDate = new Date(timestamp * 1000);
-        var dateString = theDate.toGMTString();
-        console.log('Inside convert : date.prototype.toDateString()', dateString);
-
-        return dateString;//=> Example [2011/3/25 - 23:0:0]
-    }
-
-    
 });

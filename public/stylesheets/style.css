@@ -82,6 +82,7 @@
         border-width: 1px;
         border-color: grey;
         margin-top: 7px;
+        margin-bottom: 7px;
         border-left: thick solid #014DFF;
         background-color: #21c66f ;
 }
@@ -210,6 +211,7 @@
         border: 2px #0C2D4D solid;
         text-align: center;
         border-radius: 20px;
+        outline: none;
     }
     #submitLogin {
         padding: 5px 15px;
@@ -229,12 +231,22 @@
         border-collapse: collapse;
         border: 2px solid;
         font-size: 25px;
+        counter-reset: serial-number;
     }
 
     td, th {
       border: 1px solid black;
       padding: 0.5rem;
       text-align: left;
+    }
+
+    .css-serial {
+        counter-reset: serial-number;  /* Set the serial number counter to 0 */
+    }
+
+    .css-serial td:first-child:before {
+          counter-increment: serial-number;  /* Increment the serial number counter */
+          content: counter(serial-number);  /* Display the counter */
     }
 }
 
@@ -309,6 +321,7 @@
         border-width: 1px;
         border-color: grey;
         margin-top: 5px;
+        margin-bottom: 5px;
         border-left: thick solid #014DFF;
         background-color: #21c66f ;
 }
@@ -447,6 +460,7 @@
         border: 2px #0C2D4D solid;
         text-align: center;
         border-radius: 20px;
+        outline: none;
     }
      #submitLogin {
             padding: 5px 20px;

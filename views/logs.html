@@ -29,15 +29,17 @@
     <div id="container">
         <h1>Logs</h1>
         <div id="tableStyle">
-            <table>
+            <table class="css-serial">
                 <tr>
+                    <th>No.</th>
                     <th>Date Created</th>
                     <th>Employee Name</th>
                     <th>Status</th>
                     <th>Date expected to be off work</th>
                 </tr>
                 <tr ng-repeat="log in logs | orderBy : '-date'">
-                    <td>{{ log.dateCreated}}</td>
+                    <td></td>
+                    <td>{{ log.dateCreated._d}}</td>
                     <td>{{ log.userId}}</td>
                     <td>{{ log.status}}</td>
                     <td>{{ log.date}}</td>
