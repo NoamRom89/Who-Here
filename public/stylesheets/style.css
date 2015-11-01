@@ -124,6 +124,10 @@
         padding-left: 10px;
     }
 
+    .userSection .userColor .selectOptions .options:disabled{
+        background: #dddddd;
+    }
+
     .userSection .userColor .selectOptions .options option {
         font-size: 22px;
         font-family: 'Open Sans', sans-serif;
@@ -361,6 +365,10 @@
         font-family: 'Open Sans', sans-serif;
         color: #7F7F7F;
         padding-left: 11px;
+    }
+
+    .userSection .userColor .selectOptions .options:disabled{
+        background: #dddddd;
     }
 
     .userSection .userColor .selectOptions .options option {
