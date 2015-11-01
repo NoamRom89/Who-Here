@@ -53,6 +53,11 @@ bulletinApp
             width: "100"
         },
         {
+            name: "sick",
+            displayName: "Sick",
+            width: "100"
+        },
+        {
             name: "other",
             displayName: "Other",
             width: "100"
