@@ -253,6 +253,11 @@
           content: counter(serial-number);  /* Display the counter */
     }
 }
+/**************************************************************************************************************************************/
+
+
+
+
 
 
 
@@ -346,7 +351,7 @@
     font-family: 'Open Sans', sans-serif;
     position: absolute;
     top: 40px;
-    left: 75px;
+    left: 65px;
     }
 
 
@@ -357,11 +362,11 @@
     }
 
     .userSection .userColor .selectOptions .options {
-        width: 155px;
+        width: 125px;
         height: 41px;
         display: table-column-group;
         cursor: pointer;
-        font-size: 17px;
+        font-size: 12px;
         font-family: 'Open Sans', sans-serif;
         color: #7F7F7F;
         padding-left: 11px;
