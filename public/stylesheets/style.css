@@ -231,27 +231,7 @@
     font-weight: bold;
     }
 
-    table {
-        border-collapse: collapse;
-        border: 2px solid;
-        font-size: 25px;
-        counter-reset: serial-number;
-    }
-
-    td, th {
-      border: 1px solid black;
-      padding: 0.5rem;
-      text-align: left;
-    }
-
-    .css-serial {
-        counter-reset: serial-number;  /* Set the serial number counter to 0 */
-    }
-
-    .css-serial td:first-child:before {
-          counter-increment: serial-number;  /* Increment the serial number counter */
-          content: counter(serial-number);  /* Display the counter */
-    }
+    
 }
 /**************************************************************************************************************************************/
 
@@ -496,14 +476,38 @@
     height: 100%;
 }
 
+body{
+    background-color:#dddddd !important;
+}
+
 h1{
-    position: absolute;
-    left: 918px;
-    top: 30px;
+    text-decoration: underline !important;
+    margin: 33px 950px !important;
 }
 
 #tableStyle{
     position: absolute;
     top: 115px;
     left: 356px;
+    border: 2px solid #000000;
+    font-size: 25px;
+}
+
+table tr:first-child{
+    font-size:25px !important;
+    background-color: #FCEC5A;
+}
+
+table tr th, td{
+    text-align:center !important;
+    border: 1px solid black !important; 
+}
+
+.css-serial {
+    counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+
+.css-serial td:first-child:before {
+      counter-increment: serial-number;  /* Increment the serial number counter */
+      content: counter(serial-number);  /* Display the counter */
 }
