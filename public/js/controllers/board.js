@@ -53,6 +53,11 @@ bulletinApp
             width: "100"
         },
         {
+            name: "sick",
+            displayName: "Sick",
+            width: "100"
+        },
+        {
             name: "other",
             displayName: "Other",
             width: "100"
@@ -119,7 +124,6 @@ bulletinApp
     }
     
     $scope.getNotWorkingWidth = function (userSelectedOption){
-        console.log("getNotWorking width : ", userSelectedOption);
         if (userSelectedOption != 'notWroking')
             return;
         return 75;
@@ -132,7 +136,7 @@ bulletinApp
         for (var i = 0; i < 6; i++) {
             color += letters[Math.floor(Math.random() * 16)];
         }
-        console.log('New Color: ', color);
+
         return color;
     }
 

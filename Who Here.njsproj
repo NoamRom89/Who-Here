@@ -43,6 +43,7 @@
     <Compile Include="public\js\angular\angular.js" />
     <Compile Include="public\js\angular\ngAutocomplete.js" />
     <Compile Include="public\js\controllers\board.js" />
+    <Compile Include="public\js\filter.js" />
     <Compile Include="public\js\jquery\jquery-1.11.3.min.js" />
     <Compile Include="public\js\jquery\jquery.mobile-1.4.5.min.js" />
     <Compile Include="public\js\master-app.js" />

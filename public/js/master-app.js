@@ -32,20 +32,18 @@ bulletinApp.controller('bulletinCntrl', function ($scope, $rootScope, $http, $lo
     $scope.calendar = {
         value : moment()
     }
-    
+
     $scope.getDateFormat = function () {
-        
         if (!$scope.calendar.value)
             return null;
         
         // if format already exists. return calendar.value
-
-
         return moment($scope.calendar.value).format("DD/MM/YYYY");
     }
 
     $scope.changeDate = function () {
-        console.log('changeDate - moment($scope.calendar.value).format("DD/MM/YYYY") : ', moment($scope.calendar.value).format("DD/MM/YYYY"));
+        
+        console.log("changeDate - $scope.calendar.value: ", $scope.calendar.value);
         
         updatedData($scope.getDateFormat());
     }
@@ -60,7 +58,7 @@ bulletinApp.controller('bulletinCntrl', function ($scope, $rootScope, $http, $lo
         /* API CALL  */
         
         //getting all users with their logs -- UPDATED
-        console.log('Document ready date: ', $scope.getDateFormat());
+        $scope.calendar.value = new Date;
         updatedData($scope.getDateFormat());
     });
 
@@ -70,7 +68,6 @@ bulletinApp.controller('bulletinCntrl', function ($scope, $rootScope, $http, $lo
             if (data == null) {
                 console.log('(getupdatedData == null)', data);
             } else {
-                console.log('(getupdatedData != null in api/getupdatedData)', data);
                 $scope.users = data;
             }
 
@@ -117,19 +114,38 @@ logsApp.controller('logsCntrl', function ($scope, $rootScope, $http, $location) 
     
     $scope.logs = {};
     
-    $scope.i = 0;
+    $scope.date = {
+        value : moment()
+    }
+    
+    $scope.dateUntil = {
+        value : moment()
+    }
+
+    
+    $scope.changedDate = function (log){
+        return log.date == $scope.date.value;
+    }
+    
+    $scope.changedValue = function (){
+        $scope.date.value = moment($scope.date.value).format("DD/MM/YYYY");
+    }
+    
+    $scope.searchDates = function (){
+
+    }
 
     $(document).ready(function () {
         
         //getting all users with their logs -- UPDATED
         console.log('Document ready : ');
 
+
         $http.post(window.location.origin + '/api/getLog').
             success(function (data, status, headers, config) {
             if (data == null) {
-                console.log('(getLog == null)', data);
+                console.log('(getLog == null) at Client side /api/getLog', data);
             } else {
-                console.log('(getLog != null in api/getLog)', data);
                 $scope.logs = data;
                 angular.forEach($scope.logs, function (log) {
                     log.dateCreated = moment("/Date(" + log.dateCreated + ")/");

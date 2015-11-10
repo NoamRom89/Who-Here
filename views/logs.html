@@ -13,11 +13,14 @@
     <script src="js/moment.js"></script>
     <script src="js/master-app.js"></script>
     <script src="js/controllers/board.js"></script>
+    <script src="js/filter.js"></script>
 
 
 
     <!-- CSS -->
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
@@ -28,8 +31,21 @@
 <body ng-controller="logsCntrl">
     <div id="container">
         <h1>Logs</h1>
+
+        <div class="searchDate" ng-init="betterSearchBtn=false">
+            <label>Filter dates: </label>
+            <input type="date" ng-disabled="betterSearchBtn" ng-model="date.value" id="date" ng-change="changedValue()" style="margin-left: 10px;border: 1px solid black;text-align: center;"/>
+            <label style="margin: 10px 10px;">Better search?</label><input type="checkbox" ng-model="betterSearchBtn" style=" width: 25px;height: 25px;margin-left: 100px;
+}"/>
+            <div ng-show="betterSearchBtn">
+                <label>From: </label><input type="date" ng-model="date.value" class="dateInput" />
+                <label>Until: </label><input type="date" ng-model="dateUntil.value" class="dateInput" />
+                <!--<button id="dateBtn" ng-click="searchDates()">Search!</button>-->
+            </div>
+        </div>
+
         <div id="tableStyle">
-            <table class="css-serial">
+            <table class="css-serial table table-bordered table-hover">
                 <tr>
                     <th>No.</th>
                     <th>Date Created</th>
@@ -37,7 +53,7 @@
                     <th>Status</th>
                     <th>Date expected to be off work</th>
                 </tr>
-                <tr ng-repeat="log in logs | orderBy : '-date'">
+                <tr ng-repeat="log in logs | orderBy : '-date' | datePicker : date.value : dateUntil.value">
                     <td></td>
                     <td>{{ log.dateCreated._d}}</td>
                     <td>{{ log.userId}}</td>

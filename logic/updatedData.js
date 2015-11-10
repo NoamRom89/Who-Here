@@ -60,7 +60,6 @@ var updatedData = function (date, callback){
                         console.log('log',log);
                         userDictionary[log.userId].log = log;
                     }
-                    console.log('After else!!!!!!!!!!!  user from log: ', userDictionary[log.userId]);
                 } 
             });
             callback(Object.keys(userDictionary).map(function (k) { return userDictionary[k] }));

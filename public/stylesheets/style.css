@@ -58,7 +58,7 @@
     }
 
     .calendar #date {
-        width: 276px;
+        width: 296px;
         height: 50px;
         background-color: #0A0A32;
         color: white;
@@ -193,7 +193,6 @@
     background-color: #4C4C4C;
     padding-top: 80px;
     margin-top: 75px;
-    position: relative;
     border-radius: 50px;
 }
 
@@ -208,50 +207,32 @@
        font-family: sans-serif;
     }
     #pass{
-        margin-left: -122px;
-        width: 180px;
-        height: 40px;
-        font-size: 20px;
+        margin-left: -128px;
+        width: 35%;
+        height: 30%;
+        font-size: 1.3em;
         border: 2px #0C2D4D solid;
         text-align: center;
         border-radius: 20px;
         outline: none;
     }
     #submitLogin {
-        padding: 5px 15px;
+       padding: 5px 15px;
     background: #ccc;
     border: 0 none;
     cursor: pointer;
-    position: absolute;
     border-radius: 5px;
     top: 170px;
     right: 256px;
     font-size: 15px;
     font-family: sans-serif;
     font-weight: bold;
+    display: list-item;
+    margin-top: 40px;
+    margin-left: 248px;
     }
 
-    table {
-        border-collapse: collapse;
-        border: 2px solid;
-        font-size: 25px;
-        counter-reset: serial-number;
-    }
-
-    td, th {
-      border: 1px solid black;
-      padding: 0.5rem;
-      text-align: left;
-    }
-
-    .css-serial {
-        counter-reset: serial-number;  /* Set the serial number counter to 0 */
-    }
-
-    .css-serial td:first-child:before {
-          counter-increment: serial-number;  /* Increment the serial number counter */
-          content: counter(serial-number);  /* Display the counter */
-    }
+    
 }
 /**************************************************************************************************************************************/
 
@@ -496,14 +477,62 @@
     height: 100%;
 }
 
+body{
+    background-color:#dddddd !important;
+}
+
 h1{
-    position: absolute;
-    left: 918px;
-    top: 30px;
+    text-decoration: underline !important;
+    margin: 33px 950px !important;
+}
+
+.searchDate {
+    width: 250px;
+    height: 385px;
+    font-family: sans-serif;
+    font-size: 20px;
+    border: 3px solid #000000;
+    margin-bottom: 0px;
+    overflow: hidden;
+    margin-left: 5px;
 }
 
 #tableStyle{
     position: absolute;
-    top: 115px;
+    top: 105px;
     left: 356px;
+    border: 2px solid #000000;
+    font-size: 25px;
+}
+
+table tr:first-child{
+    font-size:25px !important;
+    background-color: #FCEC5A;
+}
+
+table tr th, td{
+    text-align:center !important;
+    border: 1px solid black !important; 
+}
+
+.css-serial {
+    counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+
+.css-serial td:first-child:before {
+      counter-increment: serial-number;  /* Increment the serial number counter */
+      content: counter(serial-number);  /* Display the counter */
+}
+
+#dateBtn{
+    width : 115px;
+    height:35px;
+    margin-top: 10px;
+    margin-left: 55px;
+}
+
+.dateInput{
+    margin-left: 10px !important;
+    border: 1px solid black !important;
+    text-align: center !important;
 }
