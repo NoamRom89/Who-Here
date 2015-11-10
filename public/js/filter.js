@@ -1,22 +1,16 @@
 ﻿logsApp.filter('datePicker', function () {
-    return function (logs, date1, date2) {
-        console.log("logs:", logs);
+    return function (logs, dateFrom, dateUntil) {
         
-        
-        date1 = moment(date1).format("DD/MM/YYYY");
-        date2 = moment(date2).format("DD/MM/YYYY");
-        
-        console.log("date1:", date1);
-        console.log("date2:", date2);
-        
-        var filtered = [];
-        
-        if ((date1 === null || date1 === '') || (date2 === null || date2 === '') ) {
+        if ((dateFrom === null || dateFrom === '') || (dateUntil === null || dateUntil === '')) {
             return logs;
         }
+
+        dateFrom = moment(dateFrom).format("DD/MM/YYYY") || null;
+        dateUntil = moment(dateUntil).format("DD/MM/YYYY") || null;
         
+        var filtered = [];
         angular.forEach(logs, function (log) {
-            if ((log.date >= date1) & (log.date <= date2)) {
+            if ((log.date >= dateFrom) & (log.date <= dateUntil)) {
                 filtered.push(log);
             }
         });

@@ -92,16 +92,18 @@ bulletinApp
 
     
     //Changing users status (Leave early/1st half of the day/etc)
-    $scope.selectedStatus = function (statusName, userId) {
+    $scope.selectedStatus = function (statusName, user) {
         
         //Enter only if user changes his selection
-        console.log('statusName, userId, $scope.getDateFormat(): ', statusName, userId, $scope.$parent.getDateFormat());
+        console.log('statusName: ', statusName);
+        console.log('user: ',user);
+        console.log('$scope.getDateFormat(): ', $scope.$parent.getDateFormat());
             
 
         var log = {
             status : statusName,
             date : $scope.$parent.getDateFormat(),
-            userId : userId
+            userId : user
         }
 
         $http.post(window.location.origin + '/api/addLog', { logToBeSent : log }).

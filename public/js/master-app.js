@@ -118,6 +118,10 @@ logsApp.controller('logsCntrl', function ($scope, $rootScope, $http, $location) 
         value : moment()
     }
     
+    $scope.dateFrom = {
+        value : moment()
+    }
+    
     $scope.dateUntil = {
         value : moment()
     }
@@ -131,21 +135,22 @@ logsApp.controller('logsCntrl', function ($scope, $rootScope, $http, $location) 
         $scope.date.value = moment($scope.date.value).format("DD/MM/YYYY");
     }
     
-    $scope.searchDates = function (){
-
-    }
 
     $(document).ready(function () {
         
         //getting all users with their logs -- UPDATED
         console.log('Document ready : ');
+        $scope.date.value = null;
+        $scope.dateFrom.value = null;
+        $scope.dateUntil.value = null;
 
 
-        $http.post(window.location.origin + '/api/getLog').
+        $http.post(window.location.origin + '/api/getPopulateLog').
             success(function (data, status, headers, config) {
             if (data == null) {
-                console.log('(getLog == null) at Client side /api/getLog', data);
+                console.log('(getPopulateLog == null) at Client side /api/getPopulateLog', data);
             } else {
+                console.log('Populate logs from api/getPopulateLog: ',data);
                 $scope.logs = data;
                 angular.forEach($scope.logs, function (log) {
                     log.dateCreated = moment("/Date(" + log.dateCreated + ")/");

@@ -46,8 +46,17 @@ router.post('/api/addLog', function (req, res) {
 
 //Logs page
 router.post('/api/getLog', function (req, res) {
-    console.log('/api/getDataForLogs from index.js');
+    console.log('/api/getLog from index.js');
     logDB.getLog(function (log) {
+        res.json(log);
+    });
+
+});
+
+//Returen populate log obj
+router.post('/api/getPopulateLog', function (req, res) {
+    console.log('/api/getPopulateLog from index.js: ',req.body);
+    logDB.getPopulateLog(function (log) {
         res.json(log);
     });
 

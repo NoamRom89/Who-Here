@@ -122,8 +122,6 @@
         font-family: 'Open Sans', sans-serif;
         color: #7F7F7F;
         padding-left: 10px;
-        -webkit-appearance: none;
-        background-color:#FFF;
     }
 
     .userSection .userColor .selectOptions .options:disabled{
@@ -354,8 +352,6 @@
         font-family: 'Open Sans', sans-serif;
         color: #7F7F7F;
         padding-left: 11px;
-        -webkit-appearance: none;
-        background-color:#FFF;
     }
 
     .userSection .userColor .selectOptions .options:disabled{
@@ -521,6 +517,7 @@ table tr th, td{
     border: 1px solid black !important; 
 }
 
+
 .css-serial {
     counter-reset: serial-number;  /* Set the serial number counter to 0 */
 }
@@ -538,7 +535,21 @@ table tr th, td{
 }
 
 .dateInput{
-    margin-left: 10px !important;
+    margin-left: -15px !important;
     border: 1px solid black !important;
     text-align: center !important;
+}
+
+.searchDate div{
+    margin-top: 30px !important;
+}
+
+.searchDate div div:first-child{
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+}
+
+.searchDate div div:nth-child(2){
+    margin-left: 10px !important;
+    margin-top: 10px !important;
 }

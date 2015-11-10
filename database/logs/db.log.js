@@ -2,6 +2,10 @@
 var mongoose = require('mongoose');
 // Require user schema JS file
 var logSchema = require('./db.logSchema').logSchema;
+// Require user schema JS file
+var userSchema = require('../users/db.userSchema').userSchema;
+// User Model
+var User = mongoose.model('users', userSchema);
 // Logs Model
 var Log = mongoose.model('LogM', logSchema);
 
@@ -39,6 +43,19 @@ var getLog = function (callback) {
     
 }
 
+var getPopulateLog = function (callback) {
+
+    var query = Log.find().populate('userId').exec(function (err, logs) {
+        if (err) {
+            console.log('err', err);
+        } else {
+            callback(logs);
+        }
+    });
+
+}
+
 //Exports
 exports.addLog = addLog;
 exports.getLog = getLog;
+exports.getPopulateLog = getPopulateLog;

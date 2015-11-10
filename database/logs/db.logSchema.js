@@ -6,7 +6,7 @@ var logSchema = new schema({
 	dateCreated: {type: String, default: Date.now},
 	status: { type: String, required:true },
 	date: { type: String, required: true },
-	userId: { type: String, ref: 'users', required: true }
+	userId: { type: mongoose.Schema.Types.ObjectId, ref: 'users', required: true }
 }, { collection: 'logs' });
 
 //Exports

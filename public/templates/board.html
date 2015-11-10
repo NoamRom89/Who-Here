@@ -12,7 +12,7 @@
         <!-- each user will be able to choose (by select) the reason he/she may not come to work -->
         <div class="selectOptions">
             <select class="options" ng-options="status.name as status.displayName for status in statusEnum"
-                    ng-model="user.selected" ng-change="selectedStatus(user.selected,user._id);" ng-disabled="user.selected == 'notWorking'"
+                    ng-model="user.selected" ng-change="selectedStatus(user.selected,user);" ng-disabled="user.selected == 'notWorking'"
                     ng-style="{'width': getNotWorkingWidth(user.selected) + 'px' }">
             </select>
             <div id="addDay" ng-show="user.selected == 'notWorking'" >
