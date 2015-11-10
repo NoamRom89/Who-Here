@@ -143,6 +143,7 @@
         background-color: #ffffff;
         font-size: 30px;
         cursor: pointer;
+        -webkit-appearance: none;
     }
 
     #addDay > input:hover{
@@ -372,6 +373,7 @@
         background-color: #ffffff;
         font-size: 30px;
         cursor: pointer;
+        -webkit-appearance: none;
     }
 
     input {
@@ -524,7 +526,6 @@ table tr th, td{
       content: counter(serial-number);  /* Display the counter */
 }
 
-
 #dateBtn{
     width : 115px;
     height:35px;
@@ -537,4 +538,3 @@ table tr th, td{
     border: 1px solid black !important;
     text-align: center !important;
 }
-
