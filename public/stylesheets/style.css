@@ -123,6 +123,7 @@
         color: #7F7F7F;
         padding-left: 10px;
         -webkit-appearance: none;
+        background-color:#FFF;
     }
 
     .userSection .userColor .selectOptions .options:disabled{
@@ -354,6 +355,7 @@
         color: #7F7F7F;
         padding-left: 11px;
         -webkit-appearance: none;
+        background-color:#FFF;
     }
 
     .userSection .userColor .selectOptions .options:disabled{
