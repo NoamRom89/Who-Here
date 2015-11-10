@@ -122,6 +122,7 @@
         font-family: 'Open Sans', sans-serif;
         color: #7F7F7F;
         padding-left: 10px;
+        -webkit-appearance: none;
     }
 
     .userSection .userColor .selectOptions .options:disabled{
@@ -352,6 +353,7 @@
         font-family: 'Open Sans', sans-serif;
         color: #7F7F7F;
         padding-left: 11px;
+        -webkit-appearance: none;
     }
 
     .userSection .userColor .selectOptions .options:disabled{
